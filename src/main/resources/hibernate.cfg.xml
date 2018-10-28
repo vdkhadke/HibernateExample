@@ -1,0 +1,36 @@
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- hibernate dialect -->
+
+
+        <property name="hibernate.connection.driver_class">org.h2.Driver</property>
+        <property name="hibernate.connection.url">jdbc:h2:mem:hibernatelearn</property>
+        <property name="hibernate.connection.username">vdkhadke</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.dialect">org.hibernate.dialect.H2Dialect</property>
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
+        <!--property name="transaction.factory_class">org.hibernate.trans</property-->
+        <!-- Automatic schema creation (begin) === -->
+        <!--  property name="hibernate.hbm2ddl.auto">create</property -->
+
+
+        <!-- Simple memory-only cache -->
+        <!--property name="hibernate.cache.provider_class">org.hibernate.cache</property-->
+
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+
+        <!-- ############################################ -->
+        <!-- # mapping files with external dependencies # -->
+        <!-- ############################################ -->
+
+        <mapping resource="Person.hbm.xml" />
+
+    </session-factory>
+</hibernate-configuration>
