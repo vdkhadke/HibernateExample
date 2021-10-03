@@ -28,3 +28,9 @@ exclude build target directory
 /target/**
 
 /.idea/**
+
+# vscode generated files
+.classpath
+.factorypath
+.project
+/.settings/**

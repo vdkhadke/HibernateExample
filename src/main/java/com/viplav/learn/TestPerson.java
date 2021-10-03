@@ -2,7 +2,7 @@ package com.viplav.learn;
 
 import java.util.List;
 
-import org.hibernate.Query;
+import org.hibernate.query.Query;
 import org.hibernate.Session;
 
 
